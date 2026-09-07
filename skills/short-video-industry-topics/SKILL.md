@@ -15,6 +15,7 @@ Help the user turn an industry profile into current, region-aware one-minute vid
 - Persona example: `personas/industry-persona.example.json`
 - Idea bundles: `ideas/*.json`
 - JSON contract: read `references/video-json.md` before writing or substantially editing idea files.
+- Writing quality: read `references/writing-quality.md` before generating hooks, arcs, captions, CTAs, or critique rewrites.
 - Viewer: `npm run serve`
 - Validation: `npm run validate`
 
@@ -53,6 +54,7 @@ Propose multiple candidates before expanding. For each candidate show:
 
 - title;
 - one-sentence angle;
+- 3-5 distinct hook options using different angles;
 - likely format;
 - why now;
 - target viewer;
@@ -88,6 +90,8 @@ Each selected video should fit about 60 seconds and include:
 - payoff: practical implication;
 - CTA: one clear next action.
 
+Before finalizing the arc, run a writing-quality pass from `references/writing-quality.md`: test whether the hook has visual, verbal, and on-screen text layers; whether the middle escalates instead of listing; whether the payoff resolves the hook's promise; and whether the CTA asks for one action only.
+
 Use many shots in the timeline. A typical one-minute idea should have 5-9 timeline beats with `start` and `end` seconds, voiceover, visual direction, on-screen text, and asset needs.
 
 ## HyperFrames Handoff
@@ -109,9 +113,9 @@ Prefer stable local assets copied into the HyperFrames project before render. If
 When the user asks to remove, expand, merge, rewrite, or retarget an idea, patch the relevant file under `ideas/` directly.
 
 - For removal, set `status` to `removed` unless the user asks for deletion.
-- For expansion, preserve the original `id` and improve the arc, timeline, production notes, and verification list.
+- For expansion, preserve the original `id` and improve hook options, the arc, timeline, production notes, social copy, and verification list.
+- For writing critique, name the exact beat that loses attention, identify the failure mode, and rewrite the weak lines instead of giving abstract advice.
 - For region, audience, or tone changes, update both the top-level persona summary and affected videos.
 - After edits, run `npm run validate` when available.
 
 Keep final responses short: list the file path changed, candidate IDs, and any verification gap that remains.
-

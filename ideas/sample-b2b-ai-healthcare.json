@@ -32,14 +32,44 @@
       "region": "United States",
       "format": "operator checklist",
       "angle": "AI pilots fail when they are scoped like demos instead of workflow changes.",
+      "hook_options": [
+        {
+          "angle": "contrarian",
+          "verbal": "Most failed AI pilots do not die because the model was bad.",
+          "visual": "A stack of polished AI pilot decks drops onto an empty operations board.",
+          "on_screen_text": "The model was not the problem.",
+          "rationale": "Challenges the default technical diagnosis and opens the workflow reframe."
+        },
+        {
+          "angle": "operator",
+          "verbal": "Before you approve another AI pilot, ask these four questions.",
+          "visual": "Four blank checklist fields appear beside a proposed pilot approval.",
+          "on_screen_text": "4 questions before pilot approval",
+          "rationale": "Promises a practical checklist that health system leaders can save."
+        },
+        {
+          "angle": "cost/confession",
+          "verbal": "The expensive part of an AI pilot is not the model. It is the workflow nobody changed.",
+          "visual": "A budget line shifts from software spend to staffing, handoffs, and escalation paths.",
+          "on_screen_text": "The hidden pilot cost",
+          "rationale": "Makes the operational cost visible without inventing a specific dollar claim."
+        },
+        {
+          "angle": "investigator",
+          "verbal": "If an AI pilot has no owner, it is already halfway to the graveyard.",
+          "visual": "A pilot card with the owner field highlighted in red among other missing fields.",
+          "on_screen_text": "No owner, no pilot",
+          "rationale": "Turns a familiar governance gap into a clear diagnostic."
+        }
+      ],
       "why_now": "Healthcare AI buyers are moving from experimentation into operational proof.",
       "target_viewer": "health system innovation leaders",
       "arc": {
-        "hook": "Most failed AI pilots do not die because the model was bad.",
-        "setup": "They die because nobody changed the workflow around the model.",
-        "turn": "The useful question is not whether the demo works. It is who acts differently on Tuesday morning.",
-        "payoff": "Before approving a pilot, define the owner, trigger, escalation path, and measurement window.",
-        "cta": "Audit one active pilot against those four fields before adding another."
+        "hook": "Most failed AI pilots do not die because the model was bad. They die after the demo, when the product has to survive shift changes, inbox overload, unclear ownership, and the thousand small frictions of real clinical operations.",
+        "setup": "The typical pilot is scoped around model performance and stakeholder excitement. A team proves the alert can fire or the summary can generate, but nobody redesigns the surrounding workflow: who sees it, when they act, what they stop doing, and how the result is measured.",
+        "turn": "The better question is not whether the demo works. It is who behaves differently on Tuesday morning because this AI exists, and whether that behavior is specific enough to train, staff, escalate, and audit without a product manager standing in the room.",
+        "payoff": "Before approving a pilot, force four operational answers into the plan: one accountable owner, one clear trigger, one escalation path when confidence is low, and one measurement window tied to a real workflow metric. If any of those are vague, the pilot is not ready.",
+        "cta": "Pick one active AI pilot this week and score it against those four fields. If the owner, trigger, escalation path, or measurement window cannot be named in one sentence each, pause the expansion work and repair the operating model first."
       },
       "timeline": [
         {
@@ -100,10 +130,20 @@
         ],
         "notes": "Use local assets or generated graphics; do not imply real patient data."
       },
+      "social_copy": {
+        "caption": "AI pilots usually fail after the demo, when nobody owns the workflow change. Use this four-field check before approving the next rollout.",
+        "hashtags": [
+          "#healthcareAI",
+          "#clinicaloperations",
+          "#healthtech",
+          "#AIgovernance"
+        ],
+        "pinned_comment": "The four fields: owner, trigger, escalation path, measurement window.",
+        "cta_note": "Primary action is save/audit, not generic likes or follows."
+      },
       "claims_to_verify": [
         "Current healthcare AI adoption trend evidence for the selected publishing week."
       ]
     }
   ]
 }
-

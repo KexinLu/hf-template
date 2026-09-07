@@ -42,12 +42,26 @@ Each item in `videos` should include:
 - `title`: viewer-facing title;
 - `format`: short-video format such as `myth bust` or `operator checklist`;
 - `angle`: the core argument;
+- `hook_options`: optional batch of alternative hooks with angle, verbal line, visual hook, on-screen text, and rationale;
 - `why_now`: current news, tension, deadline, seasonal reason, or market shift;
 - `target_viewer`: who should care;
 - `arc`: `hook`, `setup`, `turn`, `payoff`, `cta`;
 - `timeline`: 5-9 beats for a normal 60-second video;
 - `production`: HyperFrames workflow and media direction;
+- `social_copy`: optional caption, hashtags, pinned comment, and CTA notes;
 - `claims_to_verify`: factual claims that need checking before publishing.
+
+Optional hook option shape:
+
+```json
+{
+  "angle": "contrarian",
+  "verbal": "Most failed AI pilots do not die because the model was bad.",
+  "visual": "Abandoned pilot cards collapse into an operations board.",
+  "on_screen_text": "The pilot was not the product.",
+  "rationale": "Starts with a defensible contradiction and previews the workflow payoff."
+}
+```
 
 Timeline beats use seconds:
 
@@ -66,10 +80,15 @@ Timeline beats use seconds:
 ## Quality Bar
 
 - Make the hook concrete, not generic.
+- Generate multiple hook options before committing to the final hook.
+- Specify the first-frame visual, spoken hook, and on-screen text for the opening beat.
+- Make the arc sections substantive enough to guide production decisions.
+- Escalate the middle beats instead of listing facts.
+- Make the payoff resolve the hook's promise.
+- Use one CTA tied to the payoff.
 - Prefer one clear claim per video.
 - Do not overfill on-screen text.
 - Put risky facts in `claims_to_verify`.
 - Include source URLs for all freshness-sensitive topics.
 - Ensure the timeline reaches approximately `production.duration_seconds`.
 - Keep asset needs actionable for HyperFrames.
-

@@ -24,7 +24,7 @@ Install runtime tools:
 brew install node ffmpeg git jq
 ```
 
-HyperFrames currently documents Node.js 22+ and FFmpeg as local requirements. This repository uses only built-in Node APIs for its viewer, so it does not require `npm install`.
+HyperFrames currently documents Node.js 22+ and FFmpeg as local requirements. This repository uses React, Mantine, and Vite for its viewer, so run `npm install` before building or serving the dashboard.
 
 Verify:
 
@@ -120,8 +120,11 @@ Use the short-video-industry-topics skill. Interview me and create my industry p
 Start the local idea viewer:
 
 ```bash
-npm run serve
+npm install
+npm run start
 ```
+
+For frontend development, keep the API/static server running with `npm run serve` and start the Vite dev UI in another shell with `npm run dev`.
 
 Validate ideas:
 
@@ -252,4 +255,3 @@ For assets:
 - HyperFrames media guidance: https://hyperframes.mintlify.app/guides/video-components
 - HyperFrames audio and captions guidance: https://hyperframes.mintlify.app/guides/voice-and-audio
 - OpenAI Codex use cases and skills workflow reference: https://learn.chatgpt.com/use-cases
-

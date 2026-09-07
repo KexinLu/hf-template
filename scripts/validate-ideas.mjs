@@ -43,6 +43,18 @@ function validateBundle(data, file) {
     requiredString(video.title, `${prefix}.title`, file);
     requiredString(video.format, `${prefix}.format`, file);
     requiredString(video.angle, `${prefix}.angle`, file);
+
+    if (video.hook_options !== undefined) {
+      requiredArray(video.hook_options, `${prefix}.hook_options`, file);
+      for (const [hookIndex, hook] of video.hook_options.entries()) {
+        const hookPrefix = `${prefix}.hook_options[${hookIndex}]`;
+        requiredString(hook.angle, `${hookPrefix}.angle`, file);
+        requiredString(hook.verbal, `${hookPrefix}.verbal`, file);
+        requiredString(hook.visual, `${hookPrefix}.visual`, file);
+        requiredString(hook.on_screen_text, `${hookPrefix}.on_screen_text`, file);
+      }
+    }
+
     requiredObject(video.arc, `${prefix}.arc`, file);
 
     for (const key of ["hook", "setup", "turn", "payoff", "cta"]) {
@@ -79,6 +91,22 @@ function validateBundle(data, file) {
     requiredString(video.production.hyperframes_workflow, `${prefix}.production.hyperframes_workflow`, file);
     requiredString(video.production.visual_style, `${prefix}.production.visual_style`, file);
     requiredString(video.production.audio, `${prefix}.production.audio`, file);
+
+    if (video.social_copy !== undefined) {
+      requiredObject(video.social_copy, `${prefix}.social_copy`, file);
+      if (video.social_copy.caption !== undefined) {
+        requiredString(video.social_copy.caption, `${prefix}.social_copy.caption`, file);
+      }
+      if (video.social_copy.hashtags !== undefined) {
+        requiredArray(video.social_copy.hashtags, `${prefix}.social_copy.hashtags`, file);
+      }
+      if (video.social_copy.pinned_comment !== undefined) {
+        requiredString(video.social_copy.pinned_comment, `${prefix}.social_copy.pinned_comment`, file);
+      }
+      if (video.social_copy.cta_note !== undefined) {
+        requiredString(video.social_copy.cta_note, `${prefix}.social_copy.cta_note`, file);
+      }
+    }
   }
 }
 
@@ -105,4 +133,3 @@ function requiredNumber(value, name, file) {
     throw new Error(`${file} ${name} must be a number`);
   }
 }
-

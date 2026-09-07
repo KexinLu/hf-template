@@ -61,6 +61,21 @@
           "region": { "type": "string" },
           "format": { "type": "string" },
           "angle": { "type": "string" },
+          "hook_options": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["angle", "verbal", "visual", "on_screen_text"],
+              "properties": {
+                "angle": { "type": "string" },
+                "verbal": { "type": "string" },
+                "visual": { "type": "string" },
+                "on_screen_text": { "type": "string" },
+                "rationale": { "type": "string" }
+              },
+              "additionalProperties": true
+            }
+          },
           "why_now": { "type": "string" },
           "target_viewer": { "type": "string" },
           "arc": {
@@ -113,6 +128,19 @@
             },
             "additionalProperties": true
           },
+          "social_copy": {
+            "type": "object",
+            "properties": {
+              "caption": { "type": "string" },
+              "hashtags": {
+                "type": "array",
+                "items": { "type": "string" }
+              },
+              "pinned_comment": { "type": "string" },
+              "cta_note": { "type": "string" }
+            },
+            "additionalProperties": true
+          },
           "claims_to_verify": {
             "type": "array",
             "items": { "type": "string" }
@@ -124,4 +152,3 @@
   },
   "additionalProperties": true
 }
-

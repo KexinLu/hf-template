@@ -1,8 +1,9 @@
 import { createServer } from "node:http";
-import { readFile, readdir, writeFile } from "node:fs/promises";
-import { extname, join, normalize, resolve } from "node:path";
+import { readFile, readdir, stat, writeFile } from "node:fs/promises";
+import { extname, isAbsolute, join, normalize, relative, resolve } from "node:path";
 
 const root = resolve(process.cwd());
+const distDir = join(root, "dist");
 const publicDir = join(root, "public");
 const ideasDir = join(root, "ideas");
 const host = process.env.HOST || "127.0.0.1";
@@ -47,10 +48,11 @@ server.listen(port, host, () => {
 });
 
 async function serveStatic(pathname, response) {
+  const staticDir = (await pathExists(join(distDir, "index.html"))) ? distDir : publicDir;
   const requested = pathname === "/" ? "/index.html" : pathname;
-  const filePath = resolve(publicDir, `.${normalize(requested)}`);
+  let filePath = resolve(staticDir, `.${normalize(requested)}`);
 
-  if (!filePath.startsWith(publicDir)) {
+  if (!isInside(staticDir, filePath)) {
     response.writeHead(403);
     response.end("Forbidden");
     return;
@@ -61,9 +63,31 @@ async function serveStatic(pathname, response) {
     response.writeHead(200, { "content-type": mimeTypes[extname(filePath)] || "application/octet-stream" });
     response.end(body);
   } catch {
+    if (extname(requested) === "") {
+      filePath = join(staticDir, "index.html");
+      const body = await readFile(filePath);
+      response.writeHead(200, { "content-type": mimeTypes[".html"] });
+      response.end(body);
+      return;
+    }
+
     response.writeHead(404, { "content-type": "text/plain; charset=utf-8" });
     response.end("Not found");
   }
+}
+
+async function pathExists(path) {
+  try {
+    await stat(path);
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+function isInside(parent, child) {
+  const relation = relative(parent, child);
+  return relation === "" || (!relation.startsWith("..") && !isAbsolute(relation));
 }
 
 async function readIdeas() {

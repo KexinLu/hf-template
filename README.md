@@ -12,15 +12,22 @@ A starter repository for building a Codex-assisted short-video workflow:
 
 Use both a runbook and npm scripts.
 
-The runbook is the source of truth for setup and operating procedure. The npm scripts provide repeatable local commands for validation, idea browsing, and HyperFrames handoff. Keeping the app dependency-free makes the repo easy to clone and run on a new Mac.
+The runbook is the source of truth for setup and operating procedure. The npm scripts provide repeatable local commands for validation, idea browsing, and HyperFrames handoff.
 
 ## Quick Start
 
 ```bash
-npm run serve
+npm install
+npm run start
 ```
 
 Open the printed local URL. The viewer reads JSON from `ideas/`.
+
+For frontend development, run the API server with `npm run serve` and the Vite UI with:
+
+```bash
+npm run dev
+```
 
 To validate idea files:
 
@@ -43,9 +50,13 @@ ideas/
 personas/
   industry-persona.example.json
 public/
-  index.html
+  index.html                  Legacy static viewer fallback
   styles.css
   app.js
+src/
+  App.jsx                     React/Mantine dashboard
+  main.jsx
+  styles.css
 scripts/
   serve-ideas.mjs
   validate-ideas.mjs
@@ -70,4 +81,3 @@ schemas/
 For local editable videos, this repo expects HyperFrames project folders to live under `hyperframes-projects/`, which is ignored by Git. The idea JSON includes `production.hyperframes_workflow`, `timeline`, and `asset_needs` fields so Codex can convert an approved concept into many shots and then into a HyperFrames composition.
 
 For hosted MCP rendering, keep connector IDs, composition IDs, and render URLs in your private notes or issue tracker unless they are safe to commit.
-
