@@ -1,0 +1,109 @@
+{
+  "version": "1.0",
+  "generated_at": "2026-09-06T00:00:00-07:00",
+  "persona": {
+    "name": "Example B2B Healthcare AI Operator",
+    "industry": "B2B healthcare AI",
+    "region": "United States",
+    "audience": "health system innovation leaders"
+  },
+  "research": {
+    "summary": "Sample data only. Replace with fresh research before production use.",
+    "queries": [
+      "B2B healthcare AI hot topics United States last 30 days",
+      "health system AI adoption operations trend United States"
+    ],
+    "sources": [
+      {
+        "title": "Sample source placeholder",
+        "url": "https://example.com/source",
+        "published_at": "2026-09-01",
+        "publisher": "Example",
+        "why_it_matters": "Demonstrates the source-note shape expected by the viewer and validator."
+      }
+    ]
+  },
+  "videos": [
+    {
+      "id": "ai-pilot-graveyard",
+      "status": "candidate",
+      "title": "The AI Pilot Graveyard Is an Ops Problem",
+      "industry": "B2B healthcare AI",
+      "region": "United States",
+      "format": "operator checklist",
+      "angle": "AI pilots fail when they are scoped like demos instead of workflow changes.",
+      "why_now": "Healthcare AI buyers are moving from experimentation into operational proof.",
+      "target_viewer": "health system innovation leaders",
+      "arc": {
+        "hook": "Most failed AI pilots do not die because the model was bad.",
+        "setup": "They die because nobody changed the workflow around the model.",
+        "turn": "The useful question is not whether the demo works. It is who acts differently on Tuesday morning.",
+        "payoff": "Before approving a pilot, define the owner, trigger, escalation path, and measurement window.",
+        "cta": "Audit one active pilot against those four fields before adding another."
+      },
+      "timeline": [
+        {
+          "start": 0,
+          "end": 4,
+          "purpose": "Pattern interrupt",
+          "voiceover": "Most failed AI pilots do not die because the model was bad.",
+          "visual": "Fast stack of abandoned pilot cards collapsing into a clean operations board.",
+          "on_screen_text": "The pilot was not the product.",
+          "asset_needs": ["abstract workflow board"]
+        },
+        {
+          "start": 4,
+          "end": 15,
+          "purpose": "Name the real failure",
+          "voiceover": "They die because the workflow never changed. The alert fires, the team nods, and then everyone keeps doing the old process.",
+          "visual": "Split screen: shiny demo on the left, unchanged clinic queue on the right.",
+          "on_screen_text": "Demo success != workflow adoption",
+          "asset_needs": ["clinic workflow illustration"]
+        },
+        {
+          "start": 15,
+          "end": 36,
+          "purpose": "Teach the checklist",
+          "voiceover": "Before approving a pilot, ask four questions. Who owns the action? What triggers it? Where does escalation go? When do we measure the change?",
+          "visual": "Four checklist blocks animate in one by one.",
+          "on_screen_text": "Owner / Trigger / Escalation / Measurement",
+          "asset_needs": []
+        },
+        {
+          "start": 36,
+          "end": 52,
+          "purpose": "Make it concrete",
+          "voiceover": "If those answers are vague, you do not have an AI implementation. You have a science fair project with a budget code.",
+          "visual": "Budget stamp turns into a project roadmap with accountable names.",
+          "on_screen_text": "No owner, no pilot.",
+          "asset_needs": []
+        },
+        {
+          "start": 52,
+          "end": 60,
+          "purpose": "CTA",
+          "voiceover": "Take one active pilot and score it against those four fields this week.",
+          "visual": "Checklist locks into a shareable scorecard.",
+          "on_screen_text": "Score one pilot this week.",
+          "asset_needs": []
+        }
+      ],
+      "production": {
+        "aspect_ratio": "9:16",
+        "duration_seconds": 60,
+        "hyperframes_workflow": "/faceless-explainer",
+        "visual_style": "quiet operational dashboard, high contrast captions, restrained motion",
+        "audio": "clear founder-style voiceover with light percussive bed",
+        "image_search_queries": [
+          "healthcare operations dashboard abstract",
+          "clinic workflow queue illustration"
+        ],
+        "notes": "Use local assets or generated graphics; do not imply real patient data."
+      },
+      "claims_to_verify": [
+        "Current healthcare AI adoption trend evidence for the selected publishing week."
+      ]
+    }
+  ]
+}
+

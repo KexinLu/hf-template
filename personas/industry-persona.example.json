@@ -1,0 +1,28 @@
+{
+  "version": "1.0",
+  "name": "Example B2B Healthcare AI Operator",
+  "industry": "B2B healthcare AI",
+  "region": "United States",
+  "audience": {
+    "primary": "health system innovation leaders",
+    "secondary": "clinic operators and digital health founders",
+    "knowledge_level": "busy expert"
+  },
+  "positioning": {
+    "point_of_view": "practical AI adoption beats generic automation hype",
+    "offers": ["workflow assessment", "AI implementation advisory"],
+    "differentiators": ["operator-led", "compliance-aware", "focused on measurable workflow lift"]
+  },
+  "content_preferences": {
+    "channels": ["LinkedIn", "YouTube Shorts", "TikTok"],
+    "tone": "direct, evidence-led, lightly contrarian",
+    "avoid": ["unsupported medical claims", "fearmongering", "patient-identifiable examples"],
+    "preferred_formats": ["myth bust", "operator checklist", "news peg explainer"]
+  },
+  "research_preferences": {
+    "recency_days": 30,
+    "trusted_sources": ["industry publications", "regulators", "public company blogs", "regional news"],
+    "blocked_sources": []
+  }
+}
+

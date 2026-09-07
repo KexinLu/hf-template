@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Video Idea Studio</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Codex Video Topic Studio</p>
+        <h1>Idea Review</h1>
+      </div>
+      <div class="actions">
+        <button id="refresh" type="button">Refresh</button>
+        <label class="toggle">
+          <input id="showRemoved" type="checkbox">
+          <span>Show removed</span>
+        </label>
+      </div>
+    </header>
+
+    <main>
+      <section id="summary" class="summary"></section>
+      <section id="ideas" class="idea-grid" aria-live="polite"></section>
+    </main>
+
+    <template id="ideaTemplate">
+      <article class="idea-card">
+        <div class="card-head">
+          <div>
+            <p class="meta"></p>
+            <h2></h2>
+          </div>
+          <span class="status"></span>
+        </div>
+        <p class="angle"></p>
+        <dl class="arc"></dl>
+        <details>
+          <summary>Timeline</summary>
+          <ol class="timeline"></ol>
+        </details>
+        <details>
+          <summary>Production</summary>
+          <div class="production"></div>
+        </details>
+        <div class="card-actions">
+          <button class="remove" type="button">Mark Removed</button>
+        </div>
+      </article>
+    </template>
+
+    <script src="/app.js" type="module"></script>
+  </body>
+</html>
+

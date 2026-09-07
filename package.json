@@ -1,0 +1,20 @@
+{
+  "name": "codex-video-topic-studio",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Codex-assisted short-video topic ideation, JSON review, and HyperFrames handoff starter repo.",
+  "type": "module",
+  "scripts": {
+    "serve": "node scripts/serve-ideas.mjs",
+    "validate": "node scripts/validate-ideas.mjs ideas/*.json",
+    "check": "npm run validate",
+    "hyperframes:skills": "npx hyperframes skills update",
+    "hyperframes:init": "npx hyperframes init",
+    "hyperframes:preview": "npx hyperframes preview",
+    "hyperframes:render": "npx hyperframes render"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
+

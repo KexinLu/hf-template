@@ -1,0 +1,4 @@
+display_name: "Short Video Industry Topics"
+short_description: "Research industry trends and produce one-minute video idea JSON."
+default_prompt: "Brainstorm one-minute short-video topics for my industry persona, ask me which candidates to expand, and write idea JSON for the viewer."
+

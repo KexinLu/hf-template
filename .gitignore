@@ -1,0 +1,9 @@
+node_modules/
+.DS_Store
+personas/industry-persona.json
+research-notes/
+hyperframes-projects/
+exports/
+dist/
+*.log
+
